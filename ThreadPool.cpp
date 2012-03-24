@@ -1,5 +1,5 @@
-#include "XCThreadPool.h"
-namespace XingCloud{
+#include "ThreadPool.h"
+
 namespace ThreadPool
 {
 
@@ -145,5 +145,4 @@ void *ThreadPool::threadExecute(void *param)
 	return (void*)0;
 }
 #endif
-}/*XingCloud*/
 }/*ThreadPool*/
