@@ -1,9 +1,10 @@
-#ifndef XCTHREADPOOL_H_
-#define XCTHREADPOOL_H_
-#include "../toplevel/STDHeaders.h"
-#include "../display/IlmThread/ilmThreadSemaphore.h"
-namespace XingCloud
-{
+#ifndef THREADPOOL_H_
+#define THREADPOOL_H_
+#include <pthread>
+#include <semaphore.h>
+#include <list>
+using namespace std;
+
 namespace ThreadPool
 {
 
@@ -40,8 +41,8 @@ class ThreadPool
 
 #ifndef WIN32
 
-		IlmThread::Semaphore *availableTask;
-		IlmThread::Semaphore *availableThreads;
+		semaphore *availableTask;
+		semaphore *availableThreads;
 		pthread_t threadIdVec[10];
 
 #endif
@@ -51,7 +52,6 @@ class ThreadPool
 		int queueSize;
 
 };
-}/*XingCloud*/
 }/*ThreadPool*/
 
 
