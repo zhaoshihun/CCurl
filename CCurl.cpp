@@ -42,6 +42,10 @@ namespace CCCurl
 		{
 			return PostMethod(buffer,bufferLength);
 		}
+		else
+		{
+			return false;
+		}
 	}
 	bool CCurl::GetMethod(const char *buffer,unsigned int bufferLength)
 	{
